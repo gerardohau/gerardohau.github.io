@@ -1,0 +1,128 @@
+:root {
+    --white: white;
+    --black: black;
+    --color-link:#d1c9cb;
+    --color-background-footer: #CFC4BA;
+    --font-primary: 'Roboto', sans-serif;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--black);  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-bar .menu-burger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul > li {
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+
+.nav-bar a, nav p {
+    color: var(--white);
+    font-family: var(--font-primary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.nav-bar a:hover {
+   color: var(--color-link);
+}
+
+.nav-bar p {
+    font-weight: 600;
+}
+
+.footer {
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: var(--color-background-footer);
+}
+
+.footer .container-footer {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.footer-text h3, .footer-text p{
+    font-family: var(--font-primary);
+    font-size: 18px;
+    color: var(--white);
+}
+
+.footer-text h3{
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.footer-text p{
+    font-weight: 300;
+}
+
+.social-media{
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.social img{
+    width: 30px;
+    height: 30px;
+}
+
+/* mobile */
+@media only screen and (max-width: 425px){
+    .nav-bar ul {
+        display: none;
+    }
+    
+    .nav-bar .menu-burger {
+        display: flex;
+    }
+    
+    .nav-bar {
+        padding: 0.3rem 0.8rem;
+    }
+
+    .footer .container-footer {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .footer .footer-text {
+        margin-top: 1rem;
+    }
+}
+
